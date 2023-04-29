@@ -1,11 +1,9 @@
 # Print
 
 
-Prenta** **til að prenta hluti notum við   `print()`.
+Prenta  `print()` til að prenta hluti notum við   `print()`.
 
 # Athugasemdir
-
-
 Athugasemdir** **eru notaðar til þess að útskíra kóðann eða sem minnispunkta fyrir forritarann. Athugasmedir byrja á `#` og svo kemur athugasemdin t.d.
 
 ```python
@@ -14,8 +12,6 @@ Athugasemdir** **eru notaðar til þess að útskíra kóðann eða sem minnispu
 
 
 # Breytur
-
-
 Breytur** **eru notaða til að geyma gögn og þær verða til um leið og við setjum þær samasem þá gagna týpu sem við viljum geyma.
 
 Í þessu dæmi er `nafn` breytan og `"Jane"` er það sem við viljum geyma í breytuni. 
