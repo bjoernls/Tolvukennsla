@@ -16,7 +16,6 @@ Breytur** **eru notaða til að geyma gögn og þær verða til um leið og við
 nafn = "Jane" 
 ```
 
-
 Í Python þurfum við ekki að skilgreyna típuna sem við viljum geyma í breytuni.
 Heiti á breytum geta verið stuttar ein og til dæmis x eða y eða lýsandi eins og nafn, aldur, meðaltal osf.
 
@@ -60,11 +59,10 @@ x = 5
 print(type(x))
 ```
 
-
 Hérna eru nokkrar algengar gerðir gagna:
 
 
-| Syntax			| type 				|
+| Syntax			| Type 				|
 | ----------------- | ----------------- |
 | x = "Hello World" | str  				|
 | x = 20			| int  				|
@@ -143,4 +141,18 @@ Eins og þið hafið tekið eftir þá notum við suma stafi sem við myndum kan
 # Booleans
 Booleans getur annað hvort verið **Ture** eða **False.** 
 
+# Aðgerðir
+Python skyptir apgerðir í eftir frandi flokka:
+	- Reykni aðgerðir
+	- Gildings aðgerðir
+	- Röksamanburðar aðgerðir
+	- Röklegar aðgerðir
+Reykni aðgerðir kannast flestir við en það eru:
+
+| Tákn			| Heiti			| Dæmi			|
+| ------------- | ------------- | ------------- |
+| +				| Samlagning	| x + y			|
+| -				| Frádráttur	| x - y			|
+| *				| Margföldun	| x * y			|
+| /				| Deiling		| x / y			|
 
