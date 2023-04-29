@@ -63,15 +63,12 @@ print(type(x))
 
 Hérna eru nokkrar algengar gerðir gagna:
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
 
-| ----------------- | ---- |
-| x = "Hello World" | str  |
-| x = 20			| int  |
-| x = 20.5 		    | float|
+| Syntax			| type 				|
+| ----------------- | ----------------- |
+| x = "Hello World" | str  				|
+| x = 20			| int  				|
+| x = 20.5 		    | float				|
 
 
 # Tölur
