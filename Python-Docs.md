@@ -1,36 +1,36 @@
 # Print
-Prenta  `print()` til að prenta hluti notum við   `print()`.
+Til að prenta texta í skipunargluggann notum við   `print()`.
 
 # Athugasemdir
-Athugasemdir eru notaðar til þess að útskíra kóðann eða sem minnispunkta fyrir forritarann. Athugasmedir byrja á `#` og svo kemur athugasemdin t.d.
+Athugasemdir eru notaðar til þess að útskýra kóðann eða sem minnispunkta fyrir forritarann. Athugasmedir byrja á `#` og svo kemur athugasemdin t.d.
 
 ```python
 # þetta er athugasemd!
 ```
 
 # Breytur
-Breytur** **eru notaða til að geyma gögn og þær verða til um leið og við setjum þær samasem þá gagna týpu sem við viljum geyma.
+**Breytur** eru notaðar til að geyma gögn og þær verða til um leið og við setjum þær samasem þá gagna týpu sem við viljum geyma.
 Í þessu dæmi er `nafn` breytan og `"Jane"` er það sem við viljum geyma í breytuni. 
 
 ```python
 nafn = "Jane" 
 ```
 
-Í Python þurfum við ekki að skilgreyna típuna sem við viljum geyma í breytuni.
-Heiti á breytum geta verið stuttar ein og til dæmis x eða y eða lýsandi eins og nafn, aldur, meðaltal osf.
+Í Python þurfum við ekki að skilgreyna týpuna sem við viljum geyma í breytunni.
+Heiti á breytum geta verið stuttar eins og til dæmis x eða y, eða lýsandi eins og nafn, aldur, meðaltal osf.
 
 ### Breytu nöfn
-Breitur verða að:
+Breytur verða að:
 - Byrja á bókstaf a-z eða undirstriki _.
-- Breytur meiga bara innihalda stafi, tölustafi , undirstriki  (A-z, 0-9, and _ ).
+- Breytur mega bara innihalda stafi, tölustafi , undirstriki  (A-z, 0-9, and _ ).
 - Breytur eru hástafanæmar sem þíðir að *nafn, Nafn, og NAFN* eru þrjár mismunandi breytur.
 - Breyta má **EKKI** byrja á tölustaf.
-- Breyta má ekki vera eitt að Python lykilorðum (keywords) → sjá lista aftast.
+- Breyta má ekki vera eitt af Python lykilorðum (keywords) → sjá lista aftast.
 
-Það er oft erfit að lesa breytur með fleyri en eitt orð en það er hægt að gera margt til að einfalda það.
-Við getur notað undirstriki _ `fjöldi_sæta`. 
+Það er oft erfitt að lesa breytur með fleiri en eitt orð en það er hægt að gera margt til að einfalda það.
+Við getur notað undirstrik _ `fjöldi_sæta`. 
 Við getum notað eitthvað sem heitir Camel Case 🐫 þar sem að hvert orð eftir fyrsta orðið byrjar á stórum staf f`jöldiSæta.` 
-Við getur líka notað eittvað sem heitir snake case 🐍 en þá notum við undirstriki  f`jöldi_sæta_í_sal.` 
+Við getur líka notað eittvað sem heitir snake case 🐍 en þá notum við undirstriki  `fjöldi_sæta_í_sal.` 
 
 # Frálag
 Í Python notum við `print()` fallið til að skila því sem við erum að gera.
@@ -75,7 +75,7 @@ Hérna eru nokkrar algengar gerðir gagna:
 - `int` 
 - `float`
 
-Breytur meða tölu gagna gerðini eru búnar til .egar meður setur breytu samasem tölu.
+Breytur meða tölu gagna gerðini eru búnar til þegar meður setur breytu samasem tölu.
 
 ```python
 x = 1    # int
@@ -101,7 +101,7 @@ y = 1.0
 z = -35.59
 ```
 # Strengir
-Streingir eru umlyktir gæsalöppum sem eru annað hvort enfaldarar `'`  eða tvöfaldar `"`.
+Strengir eru umluktir gæsalöppum sem eru annað hvort enfaldarar `'`  eða tvöfaldar `"`.
 Við getum gert strengi sem eru nokkrar línur með því að nota þrjár tvöfaldar gæsalappir `"""` eða þrjár einfaldar gæsalappir `'''`.
 Við getum sé hversu langur strengurinn er mað því að nota `len()` fallið.
 
@@ -134,6 +134,57 @@ print(fornafn + " " + eftirnafn)
 ViktorHollanders
 ```
 
+**Athugið** að **ekki** er hægt að skeyta saman tveimur mismunandi týpum, t.d. int og streng.
+
+```python
+>>> nafn = "Paul"
+>>> aldur = 16
+>>> print (nafn + " er " + aldur + " ára")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+```
+
+Í þessu tilfelli þurfum við að að nota `str()` fallið sem breytir int í streng
+```python
+>>> print (nafn + " er " + str(aldur) + " ára")
+Paul er 16 ára
+```
+
+Samskonar fall `int()` er í boði ef breyta skal streng yfir í int.
+```python
+>>> aldur = "16"
+>>> aldurEftirTvoAr = aldur + 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> aldurEftirTvoAr = int(aldur) + 2
+>>> print(aldurEftirTvoAr)
+18
+```
+Passa þarf upp á að **strengurinn sé örugglega tölustafur**.
+```python
+>>> aldurBókstafir = "sextán"
+>>> aldurTölustafir = int(aldurBókstafir)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'bla'
+```
+
+### Villumeðhöndlun
+Oft fær forritið inntak frá notanda og því ekki hægt að vera viss um að það sem slegið er inn sé það sem beðið er um. Þá er hægt að "grípa" villur sem gætu átt sér stað og annaðhvort beðið notandann um að reyna aftur, eða slökkva á keyrslunni "gracefully".
+
+```python
+print ("Sláðu inn aldur: ")
+aldurInntak = input()
+aldur = -1
+while (aldur == -1):
+ try:
+     aldur = int(aldurInntak)
+ except ValueError:
+     print("Inntak verður að vera tölustafur")
+```
+
 ### Escape Characters
 Eins og þið hafið tekið eftir þá notum við suma stafi sem við myndum kanski vilja nota inn í strengi til dæmis gæsalappir. Við getum ekki bara gert set tvöfaldar gæsa lappir in í streng sem er með tvöfaldar gæsa lappir því þá fáum við villu.
 `txt = "We are the so-called "Vikings" from the north."`  Þetta er gerir villu.
@@ -141,7 +192,7 @@ Eins og þið hafið tekið eftir þá notum við suma stafi sem við myndum kan
 `txt = "We are the so-called "Vikings" from the north."`  Þetta er má.
 
 # Booleans
-Booleans getur annað hvort verið **Ture** eða **False.** 
+Booleans getur annað hvort verið **True** eða **False.** 
 
 # Aðgerðir
 Python skyptir apgerðir í eftir frandi flokka:
