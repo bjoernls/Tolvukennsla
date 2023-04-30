@@ -21,11 +21,11 @@ Heiti á breytum geta verið stuttar ein og til dæmis x eða y eða lýsandi ei
 
 ### Breytu nöfn
 Breitur verða að:
-	- Byrja á bókstaf a-z eða undirstriki _.
-	- Breytur meiga bara innihalda stafi, tölustafi , undirstriki  (A-z, 0-9, and _ ).
-	- Breytur eru hástafanæmar sem þíðir að *nafn, Nafn, og NAFN* eru þrjár mismunandi breytur.
-	- Breyta má **EKKI** byrja á tölustaf.
-	- Breyta má ekki vera eitt að Python lykilorðum (keywords) → sjá lista aftast.
+- Byrja á bókstaf a-z eða undirstriki _.
+- Breytur meiga bara innihalda stafi, tölustafi , undirstriki  (A-z, 0-9, and _ ).
+- Breytur eru hástafanæmar sem þíðir að *nafn, Nafn, og NAFN* eru þrjár mismunandi breytur.
+- Breyta má **EKKI** byrja á tölustaf.
+- Breyta má ekki vera eitt að Python lykilorðum (keywords) → sjá lista aftast.
 
 Það er oft erfit að lesa breytur með fleyri en eitt orð en það er hægt að gera margt til að einfalda það.
 Við getur notað undirstriki _ `fjöldi_sæta`. 
