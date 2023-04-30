@@ -133,6 +133,7 @@ print(fornafn + " " + eftirnafn)
 
 ViktorHollanders
 ```
+### Samskeyting á mismunandi týpum
 
 **Athugið** að **ekki** er hægt að skeyta saman tveimur mismunandi týpum, t.d. int og streng.
 
@@ -184,6 +185,8 @@ while (aldur == -1):
  except ValueError:
      print("Inntak verður að vera tölustafur")
 ```
+Takið eftir að forritið hér fyrir ofan keyrir þangað til að tölustafur er sleginn inn.
+**Aukaverkefni:** Bætið við forritið þannig að aðeins tölustafir á milli 0 og 100 eru leyfilegir.
 
 ### Escape Characters
 Eins og þið hafið tekið eftir þá notum við suma stafi sem við myndum kanski vilja nota inn í strengi til dæmis gæsalappir. Við getum ekki bara gert set tvöfaldar gæsa lappir in í streng sem er með tvöfaldar gæsa lappir því þá fáum við villu.
@@ -195,14 +198,14 @@ Eins og þið hafið tekið eftir þá notum við suma stafi sem við myndum kan
 Booleans getur annað hvort verið **True** eða **False.** 
 
 # Aðgerðir
-Python skyptir apgerðir í eftir frandi flokka:
+Python skyptir aðgerðir í eftirfarandi flokka:
 
-- Reykni aðgerðir
-- Gildings aðgerðir
-- Röksamanburðar aðgerðir
-- Röklegar aðgerðir
+- Reikniaðgerðir
+- Gildingaraðgerðir
+- Röksamanburðaraðgerðir
+- Röklegaraðgerðir
 
-Reykni aðgerðir kannast flestir við en það eru:
+Reikniaðgerðir kannast flestir við en það eru:
 
 | Tákn			| Heiti			| Dæmi			|
 | ------------- | ------------- | ------------- |
