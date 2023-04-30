@@ -163,6 +163,9 @@ TypeError: can only concatenate str (not "int") to str
 >>> print(aldurEftirTvoAr)
 18
 ```
+
+### Villumeðhöndlun
+
 Passa þarf upp á að **strengurinn sé örugglega tölustafur**.
 ```python
 >>> aldurBókstafir = "sextán"
@@ -172,7 +175,6 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: 'bla'
 ```
 
-### Villumeðhöndlun
 Oft fær forritið inntak frá notanda og því ekki hægt að vera viss um að það sem slegið er inn sé það sem beðið er um. Þá er hægt að "grípa" villur sem gætu átt sér stað og annaðhvort beðið notandann um að reyna aftur, eða slökkva á keyrslunni "gracefully".
 
 ```python
