@@ -203,16 +203,47 @@ Booleans getur annað hvort verið **True** eða **False.**
 Python skyptir aðgerðir í eftirfarandi flokka:
 
 - Reikniaðgerðir
-- Gildingaraðgerðir
-- Röksamanburðaraðgerðir
-- Röklegaraðgerðir
+- Gildisveitingaraðgerðir
+- Samanburðaraðgerðir
+- Hallaðgerðir
 
+### Reyknisaðgerðir
 Reikniaðgerðir kannast flestir við en það eru:
 
-| Tákn			| Heiti			| Dæmi			|
-| ------------- | ------------- | ------------- |
-| +				| Samlagning	| x + y			|
-| -				| Frádráttur	| x - y			|
-| *				| Margföldun	| x * y			|
-| /				| Deiling		| x / y			|
+| Aðgerð	| Heiti			    | Dæmi			|
+| ------- | ------------- | --------- |
+| +				| Samlagning	  | x + y			|
+| -				| Frádráttur	  | x - y			|
+| *				| Margföldun	  | x * y			|
+| /				| Deiling		    | x / y			|
+| %				| Eftirstöðvun	| x % y			|
+| **			| Veldissetning	| x ** y		|
+
+### Gildisveitingaraðgerðir
+Gildisaðgerðir eru aðgerðir sem setja eitthvað gildi jafnt og eitthvað. I bland við reykni aðgerðir er hægt að nota gildisaðgerðir sem styttingu þannig að í stað þess að gera `x = x + 3` þá getum við gert `x += 3`. Þetta er hægt að gera með allar reyknisaðgerðirnar.
+
+| Aðgerð	| Stytting dæmi	| Dæmi	     |
+| ------- | ------------- | ---------- |
+| =				| x = 5	        | x = 5			 |
+| +=			| x += 3	      | x = x + 3	 |
+| -=			| x -= 3	      | x = x - 3	 |
+| *=			| x *= 3		    | x = x * 3	 |
+| /=			| x /= 3	      | x = x / 3	 |
+| %=			| x %= 3	      | x = x % 3	 |
+| **=			| x **= 3	      | x = x ** 3 |
+| &=			| x &= 3		    | x = x & 3	 |
+| |=			| x |= 3	      | x = x | 3	 |
+
+
+### Samanburðaraðgerðir
+Gildingaraðgerðir eru notaðar til að bera saman tvö gildi.
+
+| Aðgerð    | Heiti			              | Dæmi			|
+| --------- | -------------           | --------- |
+| ==			  | Samasem	                | x == y	  |
+| !=			  | Ekki samasem            | x != y		|
+| >				  | Stæra en	              | x > y			|
+| <				  | Minna en		            | x < y			|
+| >=			  | Stæra en eða jafnt og	  | x >= y		|
+| <=				| Minna en eða jafnt og		| x <= y		|
 
