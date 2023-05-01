@@ -372,7 +372,7 @@ for (line in file):
 
 # Föll
 Fall er kóða blokk sem keyrir sama kóðan þegar við köllum það. 
-Fall getur tekið inn gagna gildi og fall getur líka skilað gögnum.
+Fall getur tekið inn viðfang og fall getur líka skilað gögnum.
 Í Python er fall skilgreint með `def` lykilorðinu.
 
 ```Python
@@ -390,8 +390,8 @@ def hallo():
 hallo()
 ```
 
-### Gagna gildi
-Við getum látið fallið hafa upplýsingar með því að setja inn gagna gildi. Gagna gildir eru sett inn í svigana.
+### Viðföng
+Við getum látið fallið hafa upplýsingar með því að setja inn viðfang. Viðfangið er sett inn í svigana.
 
 ```Python
 def heilsaðu(fnafn):
@@ -401,7 +401,7 @@ heilsaðu("R2D2") # Hæ R2D2
 heilsaðu("Yoda") # Hæ Yoda
 heilsaðu("Chewbacca") # Hæ Chewbacca
 ```
-Það er hægt að setja inn mörg gagna gildi en maður þarf þá að aðskilja þau með kommu `,`.
+Það er hægt að setja inn mörg viðföng en maður þarf þá að aðskilja þau með kommu `,`.
 
 ```Python
 def undurVeraldar(bygging, byggt):
@@ -411,19 +411,10 @@ undurVeraldar("Eiffel turninn", "1889") # Eiffel turninn byggingu lokið árið 
 undurVeraldar("Pýramídarnir","2610 BC" ) # Pýramídarnir byggingu lokið árið 2610 BC
 undurVeraldar("Kína Múrinn" "206 BC") # Kína Múrinn byggingu lokið árið 206 BC
 ```
-Fall verður að vera kallað mér réttan fjölda af gagna gildum. Ef fallið tekur inn tvö gildi þá þurfum við að setja inn tvö gildi. 
+Fall verður að vera kallað mér réttan fjölda af viðfanga. Ef fallið tekur inn tvö viðföng þá þurfum við að setja inn tvö viðföng. 
 
-### Óþekktur fjöldi gilda, *gildi
-Stundum vitum við ekki hversu mörg gagna gildi við getum búsit við. Þá getum við sett stjörnuna `*` fyrir framan gagna gildið sem við viljum nota. Þannig getur fallið tekið á móti gagnagildi af óþektri stærð.
-
-```Python
-def nafnaListi(*nöfn):
-  print("Seinasta nafnið er " + nöfn[2])
-
-nafnaListi("Emil", "Tobias", "Linus") # Seinasta nafnið er Linus
-```
-### Sjálfið gildi
-Stundum viljum við hafa sjálfgefið gildi ef ekkert gildi er sett inn í fallið.
+### Sjálfin viðföng
+Stundum viljum við hafa sjálfgefið viðfang ef ekkert viðfang er sett inn í fallið.
 
 ```Python
 def heimaland(land = "Ísland"):
