@@ -198,6 +198,7 @@ while (aldur is None):
      print("Inntak verður að vera tölustafur")
 ```
 Takið eftir að forritið hér fyrir ofan keyrir þangað til að tölustafur er sleginn inn.
+
 **Aukaverkefni:** Bætið við forritið þannig að aðeins tölustafir á milli 0 og 100 eru leyfilegir.
 
 ## Slökkva á forriti "gracefully"
@@ -207,8 +208,8 @@ Venjulega er `import` skipunin sett í fyrstu línu forritsins, og í sumum forr
 
 ```python
 if (tilraunir == 0):
-    import sys
     print("Game over, bæ bæ")
+    import sys
     sys.exit(0)
 ```
 
