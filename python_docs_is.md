@@ -299,6 +299,46 @@ while (a is None):
 ```
 Í dæminu fyrir ofan keyrir forritið í lykkjunni þar til inntak frá notanda er eins og við má búast.
 
+# Segðir í Python
+
+### If-segðin
+Hægt er að keyra kóða undir ákveðnum skilyrðum. Þetta er gert með `if`-segðinni sem tekur inn rökaðgerð og tölvan metur hvort kóðinn sé keyrður í framhaldinu.
+
+Einnig er í boði að bæta við `elif`, sem er stytting á `else if`. Þessi kóði keyrir aðeins ef skilyrðið í `if`-segðinni á undan var ekki uppfyllt. Að lokum er í boði `else`, en það kemur aldrei skilyrði á eftir henni, m.ö.o. það fylgja ekki svigar á eftir. Þessi kóði er keyrður ef engin skilyrði á undan urðu uppfyllt.
+
+```python
+if (unit == "c"):
+    print("Talan er í celsíus")
+elif (unit is "f"):
+    print("Talan er í Fahrenheit")
+else:
+    print("Villa")
+```
+
+Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur : 
+Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
+
+Ýmsir möguleikar til að bera saman tvö gildi eru í boði, í forritinu fyrir ofan er athugað hvort að breyta sé jöfn "c" eða "f". Fleiri samanburðaraðgerðir eru að finna í kaflanum **Aðgerðir** hér fyrir neðan.
+
+Takið einnig eftir að hægt er að nota bæði `is` eða `==`, en það virkar alveg eins.
+
+## Lykkjur
+Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær helstu gerðir af lykkjum, `while` og `for`.
+```python
+i = 0
+while (i < 10):
+   print("Þessi lína verður prentuð 10 sinnum")
+   i = i + 1 #hér má líka skrifa i += 1 sem gerir nákvæmlega það sama.
+```
+
+**for** lykkjur eru gjarnan notaðar til að ítra yfir gagnasöfn, t.d. fylki eða skrá.
+```python
+file = open("vedurgogn.txt", "r") #hér stendur r fyrir read og gefur tölvunni til kynna að skráin verður lesin.
+for (line in file):
+    print (line) 
+```
+Í dæminu fyrir ofan er skrá opnuð með lesaðgang og prentuð út á skipanagluggann.
+
 # Fylki
 Fylki (e. array) virka eins og listar, þar sem mörg gildi eru vistuð undir sömu breytunni. Fylki eru táknaðar með hornklofum `[]`
 
@@ -341,47 +381,6 @@ Einnig er hægt að nota `for`-lykkju. Takið eftir að hér þarf ekki að nota
 "Volvo"
 "BMW"
 ```
-
-# Segðir í Python
-
-### If-segðin
-Hægt er að keyra kóða undir ákveðnum skilyrðum. Þetta er gert með `if`-segðinni sem tekur inn rökaðgerð og tölvan metur hvort kóðinn sé keyrður í framhaldinu.
-
-Einnig er í boði að bæta við `elif`, sem er stytting á `else if`. Þessi kóði keyrir aðeins ef skilyrðið í `if`-segðinni á undan var ekki uppfyllt. Að lokum er í boði `else`, en það kemur aldrei skilyrði á eftir henni, m.ö.o. það fylgja ekki svigar á eftir. Þessi kóði er keyrður ef engin skilyrði á undan urðu uppfyllt.
-
-```python
-if (unit == "c"):
-    print("Talan er í celsíus")
-elif (unit is "f"):
-    print("Talan er í Fahrenheit")
-else:
-    print("Villa")
-```
-
-Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur : 
-Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
-
-Ýmsir möguleikar til að bera saman tvö gildi eru í boði, í forritinu fyrir ofan er athugað hvort að breyta sé jöfn "c" eða "f". Fleiri samanburðaraðgerðir eru að finna í kaflanum **Aðgerðir** hér fyrir neðan.
-
-Takið einnig eftir að hægt er að nota bæði `is` eða `==`, en það virkar alveg eins.
-
-## Lykkjur
-Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær helstu gerðir af lykkjum, `while` og `for`.
-```python
-i = 0
-while (i < 10):
-   print("Þessi lína verður prentuð 10 sinnum")
-   i = i + 1 #hér má líka skrifa i += 1 sem gerir nákvæmlega það sama.
-```
-
-**for** lykkjur eru gjarnan notaðar til að ítra yfir gagnasöfn, t.d. fylki eða skrá.
-```python
-file = open("vedurgogn.txt", "r") #hér stendur r fyrir read og gefur tölvunni til kynna að skráin verður lesin.
-for (line in file):
-    print (line) 
-```
-Í dæminu fyrir ofan er skrá opnuð með lesaðgang og prentuð út á skipanagluggann.
-
 
 # Föll
 Fall er kóða blokk sem keyrir ákveðinn kóða þegar við köllum á það. Þetta er kjörin leið til að endurskrifa ekki sama kóða.
