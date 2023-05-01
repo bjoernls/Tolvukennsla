@@ -316,39 +316,39 @@ Python skyptir aðgerðir í eftirfarandi flokka:
 ### Reiknisaðgerðir
 Reikniaðgerðir kannast flestir við en það eru:
 
-| Aðgerð	| Heiti			    | Dæmi			|
-| ------- | ------------- | --------- |
-| +				| Samlagning	  | x + y			|
-| -				| Frádráttur	  | x - y			|
-| *				| Margföldun	  | x * y			|
-| /				| Deiling		    | x / y			|
-| %				| Eftirstöðvun	| x % y			|
-| **			| Veldissetning	| x ** y		|
+| Aðgerð  | Heiti			    | Dæmi		|
+| ------- | --------------- | ------------- |
+| +		  | Samlagning	    | x + y			|
+| -	      | Frádráttur	    | x - y			|
+| *		  | Margföldun	    | x * y			|
+| /		  | Deiling		    | x / y			|
+| %		  | Eftirstöðvun	| x % y			|
+| **	  | Veldissetning	| x ** y		|
 
 ### Gildisveitingaraðgerðir
 Gildisaðgerðir eru aðgerðir sem setja eitthvað gildi jafnt og eitthvað. Í bland við reikniaðgerðir er hægt að nota gildisaðgerðir sem styttingu, þannig að í stað þess að gera `x = x + 3` þá getum við gert `x += 3`. Þetta er hægt að gera með allar reiknisaðgerðirnar.
 
 | Aðgerð	| Stytting dæmi	| Dæmi	     |
-| ------- | ------------- | ---------- |
-| =				| x = 5	        | x = 5			 |
-| +=			| x += 3	      | x = x + 3	 |
-| -=			| x -= 3	      | x = x - 3	 |
-| *=			| x *= 3		    | x = x * 3	 |
-| /=			| x /= 3	      | x = x / 3	 |
-| %=			| x %= 3	      | x = x % 3	 |
-| **=			| x **= 3	      | x = x ** 3 |
-| &=			| x &= 3		    | x = x & 3	 |
-| |=			| x |= 3	      | x = x | 3	 |
+| --------- | ------------- | ---------- |
+| =		    | x = 5	        | x = 5		 |
+| +=	    | x += 3	    | x = x + 3	 |
+| -=		| x -= 3	    | x = x - 3	 |
+| *=		| x *= 3		| x = x * 3	 |
+| /=		| x /= 3	    | x = x / 3	 |
+| %=		| x %= 3	    | x = x % 3	 |
+| **=		| x **= 3	    | x = x ** 3 |
+| &=		| x &= 3		| x = x & 3	 |
+| |=		| x |= 3	    | x = x | 3	 |
 
 Eftirfarandi rökaðgerðir bera saman tvö gildi.
 
-| Tákn			    | Heiti			    | Dæmi			    | Þýðing
-| ------------- | ------------- | ------------- | ----------------------- |
-| `<`				      | Minna en  	  | `x < y`			    | `x` er minna en `y`         |
-| `>`				      | Stærra en 	  | `x > y`			    | `x` er stærra en `y`        |
-| `==`			      | Jafnt og   	  | `x == y`		    | `x` er jafnt og `y`         |
-| `not` eða `!`				      | Neitun   		  | `not x`			      | `x` er ekki satt          |
-| `is not` eða `!=`			      | Neitun		    | `x !=	y`	      | `x` er ekki jafnt og `y`    |
+| Tákn			        | Heiti			  | Dæmi		  | Þýðing                      |
+| --------------------- | --------------- | ------------- | --------------------------- |
+| `<`				    | Minna en  	  | `x < y`		  | `x` er minna en `y`         |
+| `>`			        | Stærra en 	  | `x > y`	      | `x` er stærra en `y`        |
+| `==`			        | Jafnt og   	  | `x == y`	  | `x` er jafnt og `y`         |
+| `not` eða `!`		    | Neitun   		  | `not x`		  | `x` er ekki satt            |
+| `is not` eða `!=`	    | Neitun		  | `x !=	y`	  | `x` er ekki jafnt og `y`    |
 
 Þessar aðgerðir eru mikið notaðar í `if` og `while`
 
@@ -361,11 +361,11 @@ while (x > y):
     #kóði hér
 ```
 
-## Röklegar aðgerðir
+### Röklegar aðgerðir
 Röklegar aðgerðir eru notuð til að sameina skilyrði
 
-| Aðgerð    | Heiti			                                      | Dæmi			        |
-| --------- | ----------------------------------------------- | ----------------- |
-| `and`			  | Skilar `True`	ef báðar fullyrðingarnar eru sannar | `x < 5 and  x < 10` |
-| `or`			  | Skilar `True`	ef önnur fullyrðingin eru sönn      | `x < 5 or x < 4`		|
-| `not`			  | Skilar `False` ef útkoman er `True`, snýr niðurstöðuni við | `not(x < 5 and x < 10)` |
+| Aðgerð    | Heiti			                                              | Dæmi			        |
+| --------- | ----------------------------------------------------------- | ----------------------- |
+| `and`	    | Skilar `True`	ef báðar fullyrðingarnar eru sannar           | `x < 5 and  x < 10`     |
+| `or`		| Skilar `True`	ef önnur fullyrðingin eru sönn                | `x < 5 or x < 4`		|
+| `not`		| Skilar `False` ef útkoman er `True`, snýr niðurstöðuni við  | `not(x < 5 and x < 10)` |
