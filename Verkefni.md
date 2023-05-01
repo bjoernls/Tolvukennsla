@@ -132,7 +132,7 @@ Bætið við `Verkefni 7` þannig að fundið er hæsta og lægsta meðalhitasti
 
 T.d. ef meðalhitastig í Janúar 1949, 1950, 1951 eru 2,1°C, 2,2°C, 0.2°C, þá skilar forritið eftirfarandi
 ```python
-Hæsta meðalhitastig í Janúar var árið 1950 en þá var hitastigið 2.2°C. Lægsta hitastigið var árið 1951 en þá var það 0.2°C.
+Hæsta hitastig í Janúar var árið 1950 en þá var hitastigið 2.2°C. Lægsta hitastigið var árið 1951 en þá var það 0.2°C. Meðalhiti í Janúar er 1.5°C.
 ```
 ### Verkefni 9 - Föll (ef tími gefst)
-Takið kóðan úr `Verkefni 5` og búið til fall úr því. Skilið svörunum úr `Verkefni 7` og `Verkefni 8` með valkostinum að fá hitastigin í Fahrenheit-gráðum.
+Takið kóðan úr `Verkefni 5` og búið til fall úr því. Skilið svörunum úr `Verkefni 7` og `Verkefni 8` með valkostinum um að fá hitastigin í Fahrenheit-gráðum.
