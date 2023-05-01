@@ -89,6 +89,14 @@ Skrifið fylki með a.m.k. 5 tölum og reiknið eftirfarandi:
 >>>#kóði hér sem reiknar gildin fyrir ofan
 
 ```
+
+Meðatal er fengið með að leggja saman tölurnar og deila með fjölda þeirra. Í dæminu fyrir ofan er meðaltalið:
+
+```
+Meðaltal = (6 + 2 + -1 + 9 + 4) / 5 
+         = 4
+```
+
 ### Verkefni 7 - Gagnavinnsla
 Þið fáið skrá sem inniheldur alvöru gögn frá Veðurstofunni. Í þessari skrá er að finna meðalhitastig hvers mánaðar í Reykjavík frá árinu 1949 og til dagsins í dag. 
 
