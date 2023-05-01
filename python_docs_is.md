@@ -169,10 +169,14 @@ TypeError: can only concatenate str (not "int") to str
 >>> print(aldurEftirTvoAr)
 18
 ```
+En passa þarf sérstaklega upp á að inntakið innihaldi tölustafi eins og fjallað verður um í kaflanum **Villumeðhöndlun**.
 
-### Villumeðhöndlun
+# Villumeðhöndlun
+Upp geta komið ýmisskonar villur þegar beðið er um inntak frá notanda. Til að bregðast við þvi er í boði að nota `try`-segðina. Allur kóði sem er keyrður innan um `try` er hægt að "grípa" með `except` og bregðast þannig við. Dæmi má sjá í næsta undirkafla.
 
-Passa þarf upp á að **strengurinn sé örugglega tölustafur**.
+## Nota int() á bókstafi
+Passa þarf upp á að **strengurinn sé örugglega tölustafur** þegar `int()` er notað.
+
 ```python
 >>> aldurBókstafir = "sextán"
 >>> aldurTölustafir = int(aldurBókstafir)
@@ -195,6 +199,18 @@ while (aldur is None):
 ```
 Takið eftir að forritið hér fyrir ofan keyrir þangað til að tölustafur er sleginn inn.
 **Aukaverkefni:** Bætið við forritið þannig að aðeins tölustafir á milli 0 og 100 eru leyfilegir.
+
+## Slökkva á forriti "gracefully"
+Stundum kemur upp villa í keyrslunni á forriti að ekkert annað er í stöðunni en að stoppa. Þetta getur gerst þegar notandinn slær inn viðfang sem forritið getur ekki unnið með. Til þess að stoppa forritið í miðri keyrslu, þarf að nota `import` skipunina, sem flytur inn föll annarsstaðar frá, sem forritarinn getur notað án þess að forrita þau upp á eigin spýtur.
+
+Venjulega er `import` skipunin sett í fyrstu línu forritsins, og í sumum forritunarmálum er það algjört skilyrði. En í Python má hún kom fyrir hvar sem er í forritinu.
+
+```python
+if (tilraunir == 0):
+    import sys
+    print("Game over, bæ bæ")
+    sys.exit(0)
+```
 
 ### Escape Characters
 Eins og þið hafið tekið eftir þá notum við suma stafi sem við myndum kanski vilja nota inn í strengi til dæmis gæsalappir. Við getum ekki bara gert tvöfaldar gæsalappir inn í streng sem er þegar með tvöfaldar gæsa lappir því þá fáum við villu.
@@ -270,7 +286,7 @@ Eftirfarandi rökaðgerðir bera saman tvö gildi.
 
 
 ```python
-if (x !== y):
+if (x != y):
     #kóði hér
 ...
 while (x > y):

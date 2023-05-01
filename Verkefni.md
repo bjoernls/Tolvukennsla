@@ -74,9 +74,15 @@ Forritið er núna að verða flóknara og verður því brothættara fyrir viki
 
 ```python
 >>>python verkefni5.py
->>>Sláðu inn 'f' fyrir Fahrenheit í Celsius og 'c' fyrir Celsius í Fahrenheit: 
+Sláðu inn 'f' fyrir Fahrenheit í Celsius og 'c' fyrir Celsius í Fahrenheit: 
 >>>a
->>>Vinsamlegast reyndu aftur (4 tilraunir eftir):
+Vinsamlegast reyndu aftur (4 tilraunir eftir):
+>>>c
+Sláðu inn hitastig í Celsius-gráðum:
+>>>hundrað
+Inntak verður að vera tölustafur (4 tilraunir eftir)
+>>>100
+100°C eru 212.0°F
 ```
 ### Verkefni 6 - Fylkjareikningur
 Skrifið fylki með a.m.k. 5 tölum og reiknið eftirfarandi:
