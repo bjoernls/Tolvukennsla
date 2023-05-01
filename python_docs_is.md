@@ -228,7 +228,10 @@ Boolean getur annað hvort verið **True** eða **False.**
 >>>booleanDaemi = x > 4 
 >>>print(booleanDaemi)
 True
+```
+Auk þess er hægt að beita aðgerðum, eða virkjum, á Boolean-gildi. En ólíkt tölum sem hægt er að leggja saman, draga frá, margfalda eða deila, þá standa öðruvísi aðgerðir til boða. Dæmi eru `and` og `or` hér fyrir neðan.
 
+```python
 >>>booleanDaemi2 = x < 0
 >>>print(booleanDaemi and booleanDaemi2)
 False
@@ -236,7 +239,20 @@ False
 True
 ```
 
-Seinna dæmið er `False` því **báðar** breytur verða að vera True. Ef aðeins önnur þeirra þarf að vera True, skal nota `or`. Meira um það í næsta kafla.
+Seinna dæmið er `False` því **báðar** breytur verða að vera True. Ef aðeins önnur þeirra þarf að vera True, skal nota `or`. 
+
+Hinsvegar er hægt að nota neitunarvirkja, `not` eða `!` til að "flippa" Boolean gildi. 
+
+
+```python
+>>>booleanDaemi2 = x < 0
+>>>print(booleanDaemi and not booleanDaemi2)
+True
+```
+
+Þar sem `booleanDaemi2 == False`, þá verður `not booleanDaemi2 == True`, sem er rökrétt.
+
+Meira um það í næsta kafla.
 
 # Aðgerðir
 Python skiptir aðgerðum í eftirfarandi flokka:
