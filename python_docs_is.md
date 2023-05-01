@@ -40,44 +40,6 @@ nafn = input()
 print("Góðan daginn " + nafn  + "!")
 ```
 
-# Segðir í Python
-
-### If-segðin
-Hægt er að keyra kóða undir ákveðnum skilyrðum. 
-
-```python
-if (unit == "c"):
-    print("Talan er í celsíus")
-elif (unit is "f"):
-    print("Talan er í Fahrenheit")
-else:
-    print("Villa")
-```
-
-Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur : 
-Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
-
-Ýmsir möguleikar til að bera saman tvö gildi eru í boði, í forritinu fyrir ofan er athugað hvort að breyta sé jöfn "c" eða "f". Fleiri samanburðaraðgerðir eru að finna í kaflanum **Aðgerðir** hér fyrir neðan.
-
-Takið einnig eftir að hægt er að nota bæði `is` eða `==`, en það virkar alveg eins.
-
-## Lykkjur
-Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær helstu gerðir af lykkjum, `while` og `for`.
-```python
-i = 0
-while (i < 10):
-   print("Þessi lína verður prentuð 10 sinnum")
-   i = i + 1 #hér má líka skrifa i += 1 sem gerir nákvæmlega það sama.
-```
-
-**for** lykkjur eru gjarnan notaðar til að ítra yfir gagnasöfn, t.d. fylki eða skrá.
-```python
-file = open("vedurgogn.txt", "r") #hér stendur r fyrir read og gefur tölvunni til kynna að skráin verður lesin.
-for (line in file):
-    print (line) 
-```
-Í dæminu fyrir ofan er skrá opnuð með lesaðgang og prentuð út á skipanagluggann.
-
 # Frálag
 Í Python notum við `print()` fallið til að skila því sem við erum að gera.
 
@@ -157,48 +119,6 @@ Við getum sé hversu langur strengurinn er mað því að nota `len()` fallið.
 >>>print(len(a))
 
 11
-```
-
-# None
-Stundum viljum við taka frá breytu en ekki gefa því neitt gildi. Til þess er hægt að nota `None`.
-
-```python
-a = None
-while (a is None):
-    b = input() #inntak frá notanda
-    if (b is "c" or b is "f"):
-        a = "ekki lengur None"  
-#Kóði hér með rétt inntak frá notanda
-```
-Í dæminu fyrir ofan keyrir forritið í lykkjunni þar til inntak frá notanda er eins og við má búast.
-
-# Fylki
-Fylki (e. array) virka eins og listar, þar sem mörg gildi eru vistuð undir sömu breytunni. Fylki eru táknaðar með hornklofum `[]`
-
-```python
-cars = ["Ford", "Volvo", "BMW"]
-```
-
-Til að sækja gildi úr fylki, er aftur notaðir hornklofar með tölustaf sem vísar í hvaða sæti gildið er. 
-
-**ATH** í Python og flestum forritunarmálum er fyrsta gildið alltaf 0.
-```python
->>> print(cars[0])
-"Ford"
->>> print(cars[1])
-"Volvo"
->>> print(cars[2])
-"BMW"
-```
-
-
-Til að spara okkur sporin er hægt að nota áðurnefnda `for`-lykkju
-```python
->>>for (car in cars):
->>>    print (car)
-"Ford"
-"Volvo"
-"BMW"
 ```
 
 ### Samskeyting
@@ -317,7 +237,7 @@ Python skyptir aðgerðir í eftirfarandi flokka:
 Reikniaðgerðir kannast flestir við en það eru:
 
 | Aðgerð  | Heiti			    | Dæmi		|
-| ------- | --------------- | ------------- |
+| ------- | --------------- | ---------     |
 | +		  | Samlagning	    | x + y			|
 | -	      | Frádráttur	    | x - y			|
 | *		  | Margföldun	    | x * y			|
@@ -369,3 +289,159 @@ Röklegar aðgerðir eru notuð til að sameina skilyrði
 | `and`	    | Skilar `True`	ef báðar fullyrðingarnar eru sannar           | `x < 5 and  x < 10`     |
 | `or`		| Skilar `True`	ef önnur fullyrðingin eru sönn                | `x < 5 or x < 4`		|
 | `not`		| Skilar `False` ef útkoman er `True`, snýr niðurstöðuni við  | `not(x < 5 and x < 10)` |
+
+# None
+Stundum viljum við taka frá breytu en ekki gefa því neitt gildi. Til þess er hægt að nota `None`.
+
+```python
+a = None
+while (a is None):
+    b = input() #inntak frá notanda
+    if (b is "c" or b is "f"):
+        a = "ekki lengur None"  
+#Kóði hér með rétt inntak frá notanda
+```
+Í dæminu fyrir ofan keyrir forritið í lykkjunni þar til inntak frá notanda er eins og við má búast.
+
+# Fylki
+Fylki (e. array) virka eins og listar, þar sem mörg gildi eru vistuð undir sömu breytunni. Fylki eru táknaðar með hornklofum `[]`
+
+```python
+cars = ["Ford", "Volvo", "BMW"]
+```
+
+Til að sækja gildi úr fylki, er aftur notaðir hornklofar með tölustaf sem vísar í hvaða sæti gildið er. 
+
+**ATH** í Python og flestum forritunarmálum er fyrsta gildið alltaf 0.
+```python
+>>> print(cars[0])
+"Ford"
+>>> print(cars[1])
+"Volvo"
+>>> print(cars[2])
+"BMW"
+```
+
+Til að spara okkur sporin er hægt að nota áðurnefnda `for`-lykkju
+```python
+>>>for (car in cars):
+>>>    print (car)
+"Ford"
+"Volvo"
+"BMW"
+```
+
+# Segðir í Python
+
+### If-segðin
+Hægt er að keyra kóða undir ákveðnum skilyrðum. 
+
+```python
+if (unit == "c"):
+    print("Talan er í celsíus")
+elif (unit is "f"):
+    print("Talan er í Fahrenheit")
+else:
+    print("Villa")
+```
+
+Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur : 
+Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
+
+Ýmsir möguleikar til að bera saman tvö gildi eru í boði, í forritinu fyrir ofan er athugað hvort að breyta sé jöfn "c" eða "f". Fleiri samanburðaraðgerðir eru að finna í kaflanum **Aðgerðir** hér fyrir neðan.
+
+Takið einnig eftir að hægt er að nota bæði `is` eða `==`, en það virkar alveg eins.
+
+## Lykkjur
+Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær helstu gerðir af lykkjum, `while` og `for`.
+```python
+i = 0
+while (i < 10):
+   print("Þessi lína verður prentuð 10 sinnum")
+   i = i + 1 #hér má líka skrifa i += 1 sem gerir nákvæmlega það sama.
+```
+
+**for** lykkjur eru gjarnan notaðar til að ítra yfir gagnasöfn, t.d. fylki eða skrá.
+```python
+file = open("vedurgogn.txt", "r") #hér stendur r fyrir read og gefur tölvunni til kynna að skráin verður lesin.
+for (line in file):
+    print (line) 
+```
+Í dæminu fyrir ofan er skrá opnuð með lesaðgang og prentuð út á skipanagluggann.
+
+
+# Föll
+Fall er kóða blokk sem keyrir sama kóðan þegar við köllum það. 
+Fall getur tekið inn gagna gildi og fall getur líka skilað gögnum.
+Í Python er fall skilgreint með `def` lykilorðinu.
+
+```Python
+def fallið_mitt():
+  print("Hæ frá falli")
+```
+
+### Að kalla Fall
+Til þess að kalla á fallið notum við fallnafnið með sviga fyrir aftan 
+
+```Python
+def hallo():
+  print("Halló heimur")
+
+hallo()
+```
+
+### Gagna gildi
+Við getum látið fallið hafa upplýsingar með því að setja inn gagna gildi. Gagna gildir eru sett inn í svigana.
+
+```Python
+def heilsaðu(fnafn):
+  print("Hæ {}".format(fnafn))
+
+heilsaðu("R2D2") # Hæ R2D2
+heilsaðu("Yoda") # Hæ Yoda
+heilsaðu("Chewbacca") # Hæ Chewbacca
+```
+Það er hægt að setja inn mörg gagna gildi en maður þarf þá að aðskilja þau með kommu `,`.
+
+```Python
+def undurVeraldar(bygging, byggt):
+  print("{}, byggingu lokið árið {}".format(bygging, byggt))
+
+undurVeraldar("Eiffel turninn", "1889") # Eiffel turninn byggingu lokið árið 1889
+undurVeraldar("Pýramídarnir","2610 BC" ) # Pýramídarnir byggingu lokið árið 2610 BC
+undurVeraldar("Kína Múrinn" "206 BC") # Kína Múrinn byggingu lokið árið 206 BC
+```
+Fall verður að vera kallað mér réttan fjölda af gagna gildum. Ef fallið tekur inn tvö gildi þá þurfum við að setja inn tvö gildi. 
+
+### Óþekktur fjöldi gilda, *gildi
+Stundum vitum við ekki hversu mörg gagna gildi við getum búsit við. Þá getum við sett stjörnuna `*` fyrir framan gagna gildið sem við viljum nota. Þannig getur fallið tekið á móti gagnagildi af óþektri stærð.
+
+```Python
+def nafnaListi(*nöfn):
+  print("Seinasta nafnið er " + nöfn[2])
+
+nafnaListi("Emil", "Tobias", "Linus") # Seinasta nafnið er Linus
+```
+### Sjálfið gildi
+Stundum viljum við hafa sjálfgefið gildi ef ekkert gildi er sett inn í fallið.
+
+```Python
+def heimaland(land = "Ísland"):
+  print("Ég er frá " + country)
+
+heimaland("Svíþjóð") # Ég er frá Svíþjóð
+heimaland("Frakklandi") # Ég er frá Frakklandi
+heimaland() # Ég er frá Íslandi
+heimaland("Bandaríkjunum") # Ég er frá Bandaríkjunum
+```
+
+### Að skila gildum, return
+Við getum notað `return` til að láta fallið skila gildi.
+
+```Python
+def margfaldaðMeðTveimur(x):
+  return 2 * x
+
+print(margfaldaðMeðFimm(3)) # 2 * 3 verður 6
+print(margfaldaðMeðFimm(5)) # 2 * 5 verður 10
+print(margfaldaðMeðFimm(9)) # 2 * 9 verður 18
