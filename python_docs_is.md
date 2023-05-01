@@ -32,14 +32,49 @@ Við getur notað undirstrik _ `fjöldi_sæta`.
 Við getum notað eitthvað sem heitir Camel Case 🐫 þar sem að hvert orð eftir fyrsta orðið byrjar á stórum staf f`jöldiSæta.` 
 Við getur líka notað eittvað sem heitir snake case 🐍 en þá notum við undirstriki  `fjöldi_sæta_í_sal.` 
 
+
+# Segðir í Python
+
+### If-segðin
+Hægt er að keyra kóða undir ákveðnum skilyrðum. 
+
+```python
+if (unit == "c"):
+    print("Talan er í celsíus")
+elif (unit == "f"):
+    print("Talan er í Fahrenheit")
+else:
+    print("Villa")
+```
+
+Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur : 
+Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
+
+## Lykkjur
+Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær gerðir af lykkjum, **while** og **for**.
+```python
+i = 0
+while (i < 10):
+   print("Þessi lína verður prentuð 10 sinnum")
+   i = i + 1 #hér má líka skrifa i += 1 sem gerir nákvæmlega það sama.
+```
+
+**for** lykkjur eru gjarnan notaðar til að ítra yfir gagnasöfn, t.d. fylki eða skrá.
+```python
+file = open("vedurgogn.txt", "r") #hér stendur r fyrir read og gefur tölvunni til kynna að skráin verður lesin.
+for (line in file):
+    print (line) 
+```
+Í dæminu fyrir ofan er skrá opnuð með lesaðgang og prentuð út á skipanagluggann.
+
 # Frálag
 Í Python notum við `print()` fallið til að skila því sem við erum að gera.
 
 ```python
-x = 5
-print(x)
+>>> x = 5
+>>> print(x)
 
->>> 5
+5
 ```
 Við getum skilað mörgum breytum í  `print()` fallið með því að aðskilja þær með kommu `,`.
 
