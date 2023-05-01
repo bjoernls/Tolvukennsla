@@ -150,11 +150,24 @@ Við getum gert strengi sem eru nokkrar línur með því að nota þrjár tvöf
 Við getum sé hversu langur strengurinn er mað því að nota `len()` fallið.
 
 ```python
-a = "Hello, World!"
-print(len(a))
+>>>a = "Hello, World!"
+>>>print(len(a))
 
 11
 ```
+
+# None
+Stundum viljum við taka frá breytu en ekki gefa því neitt gildi. Til þess er hægt að nota `None`.
+
+```python
+a = None
+while (a is None):
+    b = input() #inntak frá notanda
+    if (b is "c" or b is "f"):
+        a = "ekki lengur None"  
+#Kóði hér með rétt inntak frá notanda
+```
+Í dæminu fyrir ofan keyrir forritið í lykkjunni þar til inntak frá notanda er eins og við má búast.
 
 # Fylki
 Fylki (e. array) virka eins og listar, þar sem mörg gildi eru vistuð undir sömu breytunni. Fylki eru táknaðar með hornklofum `[]`
@@ -253,8 +266,8 @@ Oft fær forritið inntak frá notanda og því ekki hægt að vera viss um að 
 ```python
 print ("Sláðu inn aldur: ")
 aldurInntak = input()
-aldur = -1
-while (aldur == -1):
+aldur = None
+while (aldur is None):
  try:
      aldur = int(aldurInntak)
  except ValueError:
@@ -269,8 +282,22 @@ Eins og þið hafið tekið eftir þá notum við suma stafi sem við myndum kan
 í staðin þurfum við að nota Escape Character sem er öfugt skástrik og svo stafurinn sem við viljum nota `\"`.
 `txt = "We are the so-called "Vikings" from the north."`  Þetta er má.
 
-# Booleans
-Booleans getur annað hvort verið **True** eða **False.** 
+# Boolean
+Boolean getur annað hvort verið **True** eða **False.** 
+```python
+>>>x = 5
+>>>booleanDaemi = x > 4 
+>>>print(booleanDaemi)
+True
+
+>>>booleanDaemi2 = x < 0
+>>>print(booleanDaemi and booleanDaemi2)
+False
+>>>print(booleanDaemi or booleanDaemi2)
+True
+```
+
+Seinna dæmið er `False` því **báðar** breytur verða að vera True. Ef aðeins önnur þeirra þarf að vera True, skal nota `or`. Meira um það í næsta kafla.
 
 # Aðgerðir
 Python skyptir aðgerðir í eftirfarandi flokka:
@@ -280,7 +307,7 @@ Python skyptir aðgerðir í eftirfarandi flokka:
 - Röksamanburðaraðgerðir
 - Röklegar aðgerðir
 
-### Reyknisaðgerðir
+### Reiknisaðgerðir
 Reikniaðgerðir kannast flestir við en það eru:
 
 | Aðgerð	| Heiti			    | Dæmi			|
@@ -293,7 +320,7 @@ Reikniaðgerðir kannast flestir við en það eru:
 | **			| Veldissetning	| x ** y		|
 
 ### Gildisveitingaraðgerðir
-Gildisaðgerðir eru aðgerðir sem setja eitthvað gildi jafnt og eitthvað. I bland við reykni aðgerðir er hægt að nota gildisaðgerðir sem styttingu þannig að í stað þess að gera `x = x + 3` þá getum við gert `x += 3`. Þetta er hægt að gera með allar reyknisaðgerðirnar.
+Gildisaðgerðir eru aðgerðir sem setja eitthvað gildi jafnt og eitthvað. Í bland við reikniaðgerðir er hægt að nota gildisaðgerðir sem styttingu, þannig að í stað þess að gera `x = x + 3` þá getum við gert `x += 3`. Þetta er hægt að gera með allar reiknisaðgerðirnar.
 
 | Aðgerð	| Stytting dæmi	| Dæmi	     |
 | ------- | ------------- | ---------- |
@@ -311,11 +338,11 @@ Eftirfarandi rökaðgerðir bera saman tvö gildi.
 
 | Tákn			    | Heiti			    | Dæmi			    | Þýðing
 | ------------- | ------------- | ------------- | ----------------------- |
-| <				      | Minna en  	  | x < y			    | x er minna en y         |
-| >				      | Stærra en 	  | x > y			    | x er stærra en y        |
-| ==			      | Samasem   	  | x == y		    | x er jafnt og y         |
-| !				      | Neitun   		  | !x			      | x er ekki satt          |
-| !==			      | Neitun		    | x !==	y	      | x er ekki jafnt og y    |
+| `<`				      | Minna en  	  | `x < y`			    | `x` er minna en `y`         |
+| `>`				      | Stærra en 	  | `x > y`			    | `x` er stærra en `y`        |
+| `==`			      | Jafnt og   	  | `x == y`		    | `x` er jafnt og `y`         |
+| `not` eða `!`				      | Neitun   		  | `not x`			      | `x` er ekki satt          |
+| `is not` eða `!=`			      | Neitun		    | `x !=	y`	      | `x` er ekki jafnt og `y`    |
 
 Þessar aðgerðir eru mikið notaðar í `if` og `while`
 
@@ -333,6 +360,6 @@ Röklegar aðgerðir eru notuð til að sameina skilyrði
 
 | Aðgerð    | Heiti			                                      | Dæmi			        |
 | --------- | ----------------------------------------------- | ----------------- |
-| and			  | Skilar True	ef báðar fullyrðingarnar eru sannar | x < 5 and  x < 10 |
-| or			  | Skilar True	ef önnur fullyrðingin eru sönn      | x < 5 or x < 4		|
-| not			  | Skilar ósatt ef útkoman er sönn, snýr niðurstöðuni við | not(x < 5 and x < 10) |
+| `and`			  | Skilar `True`	ef báðar fullyrðingarnar eru sannar | `x < 5 and  x < 10` |
+| `or`			  | Skilar `True`	ef önnur fullyrðingin eru sönn      | `x < 5 or x < 4`		|
+| `not`			  | Skilar `False` ef útkoman er `True`, snýr niðurstöðuni við | `not(x < 5 and x < 10)` |
