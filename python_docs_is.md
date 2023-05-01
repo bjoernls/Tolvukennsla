@@ -52,11 +52,12 @@ print("Góðan daginn " + nafn  + "!")
 Við getum skilað mörgum breytum í  `print()` fallið með því að aðskilja þær með kommu `,`.
 
 ```python
-x = "Python "
-y = "er "
-z = "skemtilegt "
+>>>x = "Python "
+>>>y = "er "
+>>>z = "skemtilegt "
 
-print(x, y, z)
+>>>print(x, y, z)
+Python er skemmtilegt
 ```
 
 # Gerðir gagna
@@ -125,23 +126,18 @@ Við getum sé hversu langur strengurinn er mað því að nota `len()` fallið.
 Í forritun virkar plúsin eins og í stærðfræði hann leggur saman tvær tölur. En eð við notum + með strengjum þá skeytir hann strengina saman. 
 
 ```python
-fornafn = "Viktor"
-eftirnafn = "Hollanders"
+>>>fornafn = "Viktor"
+>>>eftirnafn = "Hollanders"
 
-print(fornafn + eftirnafn)
-
+>>>print(fornafn + eftirnafn)
 ViktorHollanders
 ```
-Eins og þið sjáið þá varð þetta eitt orð þrátt fyrir að við settum bil á milli `fornafns  + og eftirnanfn` . Þetta er vegna þess að samskeytingin les ekki bilin. Við þurfum sjálf að setja þau inn á milli gæsalappana. Við getum gert að með því að bæta inn streng sem er bil `" "` eða með því að bæta bil fyrir aftan fornafn `"Viktor "` eða fyrir framan eftirnafn `" Hollanders"`.
+Eins og þið sjáið þá varð þetta eitt orð þrátt fyrir að við settum bil á milli `fornafn`, `+`, og `eftirnafn` . Þetta er vegna þess að samskeytingin les ekki bilin. Við þurfum sjálf að setja þau inn á milli gæsalappana. Við getum gert að með því að bæta inn streng sem er bil `" "` eða með því að bæta bil fyrir aftan fornafn `"Viktor "` eða fyrir framan eftirnafn `" Hollanders"`.
 Hérna er þatta sýnt með bill inn í streng
 
 ```python
-fornafn = "Viktor"
-eftirnafn = "Hollanders"
-
-print(fornafn + " " + eftirnafn)
-
-ViktorHollanders
+>>>print(fornafn + " " + eftirnafn)
+Viktor Hollanders
 ```
 ### Samskeyting á mismunandi týpum
 
@@ -226,7 +222,7 @@ True
 Seinna dæmið er `False` því **báðar** breytur verða að vera True. Ef aðeins önnur þeirra þarf að vera True, skal nota `or`. Meira um það í næsta kafla.
 
 # Aðgerðir
-Python skyptir aðgerðir í eftirfarandi flokka:
+Python skiptir aðgerðum í eftirfarandi flokka:
 
 - Reikniaðgerðir
 - Gildingaraðgerðir
@@ -322,7 +318,22 @@ Til að sækja gildi úr fylki, er aftur notaðir hornklofar með tölustaf sem 
 "BMW"
 ```
 
-Til að spara okkur sporin er hægt að nota áðurnefnda `for`-lykkju
+Til að spara okkur sporin er hægt að nota lykkjur.
+
+Með `while`-lykkju þarf að finna út stærðina á fylkinu, en það er gert með áðurnefnda `len()` fallinu.
+
+```python
+>>>i = 0
+>>>while (i < len(cars)):
+>>>     print (cars[i])
+>>>     i += 1
+"Ford"
+"Volvo"
+"BMW"
+```
+
+Einnig er hægt að nota `for`-lykkju. Takið eftir að hér þarf ekki að nota hornklofa eins og í `while`-lykkjunni og kóðinn er snyrtilegri fyrir vikið. 
+
 ```python
 >>>for (car in cars):
 >>>    print (car)
@@ -334,7 +345,9 @@ Til að spara okkur sporin er hægt að nota áðurnefnda `for`-lykkju
 # Segðir í Python
 
 ### If-segðin
-Hægt er að keyra kóða undir ákveðnum skilyrðum. 
+Hægt er að keyra kóða undir ákveðnum skilyrðum. Þetta er gert með `if`-segðinni sem tekur inn rökaðgerð og tölvan metur hvort kóðinn sé keyrður í framhaldinu.
+
+Einnig er í boði að bæta við `elif`, sem er stytting á `else if`. Þessi kóði keyrir aðeins ef skilyrðið í `if`-segðinni á undan var ekki uppfyllt. Að lokum er í boði `else`, en það kemur aldrei skilyrði á eftir henni, m.ö.o. það fylgja ekki svigar á eftir. Þessi kóði er keyrður ef engin skilyrði á undan urðu uppfyllt.
 
 ```python
 if (unit == "c"):
@@ -371,8 +384,9 @@ for (line in file):
 
 
 # Föll
-Fall er kóða blokk sem keyrir sama kóðan þegar við köllum það. 
-Fall getur tekið inn viðfang og fall getur líka skilað gögnum.
+Fall er kóða blokk sem keyrir ákveðinn kóða þegar við köllum á það. Þetta er kjörin leið til að endurskrifa ekki sama kóða.
+
+Fall getur tekið inn viðfang og það getur líka skilað gögnum.
 Í Python er fall skilgreint með `def` lykilorðinu.
 
 ```Python
@@ -380,7 +394,7 @@ def fallið_mitt():
   print("Hæ frá falli")
 ```
 
-### Að kalla Fall
+### Að kalla á Fall
 Til þess að kalla á fallið notum við fallnafnið með sviga fyrir aftan 
 
 ```Python
@@ -391,7 +405,7 @@ hallo()
 ```
 
 ### Viðföng
-Við getum látið fallið hafa upplýsingar með því að setja inn viðfang. Viðfangið er sett inn í svigana.
+Við getum látið fallið hafa upplýsingar með því að setja inn sem viðfang. Viðfangið er sett inn í svigana.
 
 ```Python
 def heilsaðu(fnafn):
@@ -411,9 +425,9 @@ undurVeraldar("Eiffel turninn", "1889") # Eiffel turninn byggingu lokið árið 
 undurVeraldar("Pýramídarnir","2610 BC" ) # Pýramídarnir byggingu lokið árið 2610 BC
 undurVeraldar("Kína Múrinn" "206 BC") # Kína Múrinn byggingu lokið árið 206 BC
 ```
-Fall verður að vera kallað mér réttan fjölda af viðfanga. Ef fallið tekur inn tvö viðföng þá þurfum við að setja inn tvö viðföng. 
+Fall verður að vera kallað með réttan fjölda af viðföngum. Ef fallið tekur inn tvö viðföng, þá þurfum við að setja inn tvö viðföng. Ein undantekning eru sjálfgefin viðföng. 
 
-### Sjálfin viðföng
+### Sjálfgefin viðföng
 Stundum viljum við hafa sjálfgefið viðfang ef ekkert viðfang er sett inn í fallið.
 
 ```Python
