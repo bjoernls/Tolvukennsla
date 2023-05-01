@@ -2,7 +2,7 @@
 Til að prenta texta í skipunargluggann notum við   `print()`.
 
 # Athugasemdir
-Athugasemdir eru notaðar til þess að útskýra kóðann eða sem minnispunkta fyrir forritarann. Athugasmedir byrja á `#` og svo kemur athugasemdin t.d.
+Athugasemdir eru notaðar til þess að útskýra kóðann eða sem minnispunkta fyrir forritarann. Athugasemdir byrja á `#` og svo kemur athugasemdin t.d.
 
 ```python
 # þetta er athugasemd!
@@ -10,14 +10,14 @@ Athugasemdir eru notaðar til þess að útskýra kóðann eða sem minnispunkta
 
 # Breytur
 **Breytur** eru notaðar til að geyma gögn og þær verða til um leið og við setjum þær samasem þá gagna týpu sem við viljum geyma.
-Í þessu dæmi er `nafn` breytan og `"Jane"` er það sem við viljum geyma í breytuni. 
+Í þessu dæmi er `nafn` breytan og `"Jane"` er það sem við viljum geyma í breytunni. 
 
 ```python
 nafn = "Jane" 
 ```
 
 Í Python þurfum við ekki að skilgreyna týpuna sem við viljum geyma í breytunni.
-Heiti á breytum geta verið stuttar eins og til dæmis x eða y, eða lýsandi eins og nafn, aldur, meðaltal osf.
+Heiti á breytum geta verið stuttar eins og til dæmis x eða y, eða lýsandi eins og nafn, aldur, meðaltal o.s.frv..
 
 ### Breytu nöfn
 Breytur verða að:
@@ -28,8 +28,8 @@ Breytur verða að:
 - Breyta má ekki vera eitt af Python lykilorðum (keywords) → sjá lista aftast.
 
 Það er oft erfitt að lesa breytur með fleiri en eitt orð en það er hægt að gera margt til að einfalda það.
-Við getur notað undirstrik _ `fjöldi_sæta`. 
-Við getum notað eitthvað sem heitir Camel Case 🐫 þar sem að hvert orð eftir fyrsta orðið byrjar á stórum staf f`jöldiSæta.` 
+Við getur notað undirstrik  `_fjöldi_sæta`. 
+Við getum notað eitthvað sem heitir Camel Case 🐫 þar sem að hvert orð eftir fyrsta orðið byrjar á stórum staf `fjöldiSæta.` 
 Við getur líka notað eittvað sem heitir snake case 🐍 en þá notum við undirstriki  `fjöldi_sæta_í_sal.` 
 
 ### Inntak frá notanda
@@ -48,7 +48,7 @@ Hægt er að keyra kóða undir ákveðnum skilyrðum.
 ```python
 if (unit == "c"):
     print("Talan er í celsíus")
-elif (unit == "f"):
+elif (unit is "f"):
     print("Talan er í Fahrenheit")
 else:
     print("Villa")
@@ -58,6 +58,8 @@ Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur :
 Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
 
 Ýmsir möguleikar til að bera saman tvö gildi eru í boði, í forritinu fyrir ofan er athugað hvort að breyta sé jöfn "c" eða "f". Fleiri samanburðaraðgerðir eru að finna í kaflanum **Aðgerðir** hér fyrir neðan.
+
+Takið einnig eftir að hægt er að nota bæði `is` eða `==`, en það virkar alveg eins.
 
 ## Lykkjur
 Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær helstu gerðir af lykkjum, `while` og `for`.
@@ -130,7 +132,7 @@ y = 2.8  # float
 Eins og var útskýrt hér á undan þá getum við notað `type()`  til að sjá af hvaða tölu gerð gögnin eru.
 
 ### Int
- Int eru helitölur jákvæðar eða neikvæðar án kommu.
+ Int eru jákvæðar eða neikvæðar heiltölur án kommu.
 
 ```python
 x = 1
@@ -138,7 +140,7 @@ y = 35656222554887711
 z = -3255522
 ```
 ### Float
-Float eða (floating point number) eru jákvæðar eða neikvæðar kommu tölur með fleiri ein eða fleiri aukastafi.
+Float eða (floating point number) eru jákvæðar eða neikvæðar kommu tölur með einn eða fleiri aukastafi.
 
 ```python
 x = 1.10
@@ -146,7 +148,7 @@ y = 1.0
 z = -35.59
 ```
 # Strengir
-Strengir eru umluktir gæsalöppum sem eru annað hvort enfaldarar `'`  eða tvöfaldar `"`.
+Strengir eru umluktir gæsalöppum sem eru annað hvort einfaldar `'`  eða tvöfaldar `"`.
 Við getum gert strengi sem eru nokkrar línur með því að nota þrjár tvöfaldar gæsalappir `"""` eða þrjár einfaldar gæsalappir `'''`.
 Við getum sé hversu langur strengurinn er mað því að nota `len()` fallið.
 
@@ -178,6 +180,7 @@ cars = ["Ford", "Volvo", "BMW"]
 ```
 
 Til að sækja gildi úr fylki, er aftur notaðir hornklofar með tölustaf sem vísar í hvaða sæti gildið er. 
+
 **ATH** í Python og flestum forritunarmálum er fyrsta gildið alltaf 0.
 ```python
 >>> print(cars[0])
@@ -209,8 +212,8 @@ print(fornafn + eftirnafn)
 
 ViktorHollanders
 ```
-Eins og þið sjáið þá varð þetta eitt orð þrátt fyrir að við settum bil á milli `fornafns  + og eftirnanfn` . Þetta er vegna þess að samskeytingin les ekki bilin. Við þurfum sjálf að setja þau inn. Við getum gert að með því að bæta inn streng sem er bil `" "` eða með því að bæta bil fyrir aftan fornafn `"Viktor "` eða fyrir frama eftrirnafn `" Hollanders"`.
-Hérna er þatta sýnt með bill inn í streyng
+Eins og þið sjáið þá varð þetta eitt orð þrátt fyrir að við settum bil á milli `fornafns  + og eftirnanfn` . Þetta er vegna þess að samskeytingin les ekki bilin. Við þurfum sjálf að setja þau inn á milli gæsalappana. Við getum gert að með því að bæta inn streng sem er bil `" "` eða með því að bæta bil fyrir aftan fornafn `"Viktor "` eða fyrir framan eftirnafn `" Hollanders"`.
+Hérna er þatta sýnt með bill inn í streng
 
 ```python
 fornafn = "Viktor"
@@ -278,10 +281,12 @@ Takið eftir að forritið hér fyrir ofan keyrir þangað til að tölustafur e
 **Aukaverkefni:** Bætið við forritið þannig að aðeins tölustafir á milli 0 og 100 eru leyfilegir.
 
 ### Escape Characters
-Eins og þið hafið tekið eftir þá notum við suma stafi sem við myndum kanski vilja nota inn í strengi til dæmis gæsalappir. Við getum ekki bara gert set tvöfaldar gæsa lappir in í streng sem er með tvöfaldar gæsa lappir því þá fáum við villu.
-`txt = "We are the so-called "Vikings" from the north."`  Þetta er gerir villu.
-í staðin þurfum við að nota Escape Character sem er öfugt skástrik og svo stafurinn sem við viljum nota `\"`.
-`txt = "We are the so-called "Vikings" from the north."`  Þetta er má.
+Eins og þið hafið tekið eftir þá notum við suma stafi sem við myndum kanski vilja nota inn í strengi til dæmis gæsalappir. Við getum ekki bara gert tvöfaldar gæsalappir inn í streng sem er þegar með tvöfaldar gæsa lappir því þá fáum við villu.
+`txt = "We are the so-called "Vikings" from the north."`  Þetta orsakar villu.
+Í staðinn þurfum við að nota Escape Character sem er öfugt skástrik og svo stafurinn sem við viljum nota `\"`.
+
+
+`txt = "We are the so-called \"Vikings\" from the north."` 
 
 # Boolean
 Boolean getur annað hvort verið **True** eða **False.** 
