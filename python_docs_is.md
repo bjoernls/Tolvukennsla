@@ -413,6 +413,8 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: list index out of range
 ```
+Þetta kemur til því að fyrsta gildið er ávallt 0, þess vegna er síðasta gildið í fylkinu `len(cars) - 1`, eða í þessu tilfelli 2, eins og sést fyrir ofan.
+
 Til að sækja síðasta gildi fylkis, þarf að draga frá 1.
 ```python
 >>> cars[len(cars) - 1]
