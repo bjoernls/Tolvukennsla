@@ -57,6 +57,19 @@ Við getum skilað mörgum breytum í  `print()` fallið með því að aðskilj
 Python er skemmtilegt
 ```
 
+Við getum merkt staði í streng sem skipta á út fyrir með slaufusvigum `{}`. Passa þarf að viðföngin komi fyrir í réttri röð.
+
+```python
+>>>x = "0"
+>>>y = "32"
+
+>>>print("{}°C eru {}°F", x, y)
+0°C eru 32°F
+>>>print("{}°C eru {}°F", y, x)
+32°C eru 0°F
+```
+
+
 # Gerðir gagna
 Hægt er að sjá af hvaða gerð gögnin eru sem við erum að vinna með með því að nota `type()` fallið.
 
