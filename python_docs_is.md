@@ -329,10 +329,10 @@ while (x > y):
 ```
 
 ## Röklegar aðgerðir
-Hallalausir aðgerðir eru notuð til að sameina skilyrðisbundna  
+Röklegar aðgerðir eru notuð til að sameina skilyrði
 
 | Aðgerð    | Heiti			                                      | Dæmi			        |
 | --------- | ----------------------------------------------- | ----------------- |
 | and			  | Skilar True	ef báðar fullyrðingarnar eru sannar | x < 5 and  x < 10 |
 | or			  | Skilar True	ef önnur fullyrðingin eru sönn      | x < 5 or x < 4		|
-|not			  | Skilar ósatt ef útkoman er sönn, snýr niðurstöðuni við | not(x < 5 and x < 10) |
+| not			  | Skilar ósatt ef útkoman er sönn, snýr niðurstöðuni við | not(x < 5 and x < 10) |
