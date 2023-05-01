@@ -32,6 +32,13 @@ Við getur notað undirstrik _ `fjöldi_sæta`.
 Við getum notað eitthvað sem heitir Camel Case 🐫 þar sem að hvert orð eftir fyrsta orðið byrjar á stórum staf f`jöldiSæta.` 
 Við getur líka notað eittvað sem heitir snake case 🐍 en þá notum við undirstriki  `fjöldi_sæta_í_sal.` 
 
+### Inntak frá notanda
+Til að biðja notanda um inntak, er hægt að nota ´input()´ og vista það í breytu.
+```python
+print("Hvað heitir þú?")
+nafn = input()
+print("Góðan daginn " + nafn  + "!")
+```
 
 # Segðir í Python
 
@@ -51,7 +58,7 @@ Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur :
 Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
 
 ## Lykkjur
-Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær gerðir af lykkjum, **while** og **for**.
+Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær helstu gerðir af lykkjum, `while` og `for`.
 ```python
 i = 0
 while (i < 10):
@@ -251,3 +258,23 @@ Reikniaðgerðir kannast flestir við en það eru:
 | *				| Margföldun	| x * y			|
 | /				| Deiling		| x / y			|
 
+
+
+| Tákn			| Heiti			| Dæmi			| Þýðing
+| ------------- | ------------- | ------------- | ------------- 
+| <				| Minna en  	| x + y			| x er minna en y
+| >				| Stærra en 	| x - y			| x er stærra en y
+| ==			| Samasem   	| x == y		| x er jafnt og y
+| !				| Neitun   		| !x			| x er ekki satt
+| !==			| Neitun		| x !==	y	    | x er ekki jafnt og y
+
+Þessar aðgerðir eru mikið notaðar í `if` og `while`
+
+
+```python
+if (x !== y):
+    #kóði hér
+...
+while (x > y):
+    #kóði hér
+```
