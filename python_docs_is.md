@@ -247,7 +247,7 @@ Python skyptir aðgerðir í eftirfarandi flokka:
 - Reikniaðgerðir
 - Gildingaraðgerðir
 - Röksamanburðaraðgerðir
-- Röklegaraðgerðir
+- Röklegar aðgerðir
 
 Reikniaðgerðir kannast flestir við en það eru:
 
@@ -258,12 +258,12 @@ Reikniaðgerðir kannast flestir við en það eru:
 | *				| Margföldun	| x * y			|
 | /				| Deiling		| x / y			|
 
-
+Eftirfarandi rökaðgerðir bera saman tvö gildi.
 
 | Tákn			| Heiti			| Dæmi			| Þýðing
 | ------------- | ------------- | ------------- | ------------- 
-| <				| Minna en  	| x + y			| x er minna en y
-| >				| Stærra en 	| x - y			| x er stærra en y
+| <				| Minna en  	| x < y			| x er minna en y
+| >				| Stærra en 	| x > y			| x er stærra en y
 | ==			| Samasem   	| x == y		| x er jafnt og y
 | !				| Neitun   		| !x			| x er ekki satt
 | !==			| Neitun		| x !==	y	    | x er ekki jafnt og y
