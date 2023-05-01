@@ -393,15 +393,35 @@ Til að sækja gildi úr fylki, er aftur notaðir hornklofar með tölustaf sem 
 **ATH** í Python og flestum forritunarmálum er fyrsta gildið alltaf 0.
 ```python
 >>> print(cars[0])
-"Ford"
+Ford
 >>> print(cars[1])
-"Volvo"
+Volvo
 >>> print(cars[2])
-"BMW"
+BMW
+```
+## Stærð fylkis
+Hægt er að komast að stærð fylkis með fallinu `len()`.
+```python
+>>>print(len(cars))
+3
 ```
 
-Til að spara okkur sporin er hægt að nota lykkjur.
+Hafa þarf aðgát þegar `len()` er notað til að sækja gögn úr fylki, þar sem stærðin á fylkinu mun valda villu.
+```python
+>>> cars[len(cars)]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+```
+Til að sækja síðasta gildi fylkis, þarf að draga frá 1.
+```python
+>>> cars[len(cars) - 1]
+BMW
+```
 
+## Ítrun yfir fylki
+Til að spara okkur sporin er hægt að nota lykkjur.
+### while
 Með `while`-lykkju þarf að finna út stærðina á fylkinu, en það er gert með áðurnefnda `len()` fallinu.
 
 ```python
@@ -409,19 +429,19 @@ Með `while`-lykkju þarf að finna út stærðina á fylkinu, en það er gert 
 >>>while (i < len(cars)):
 >>>     print (cars[i])
 >>>     i += 1
-"Ford"
-"Volvo"
-"BMW"
+Ford
+Volvo
+BMW
 ```
-
+### for
 Einnig er hægt að nota `for`-lykkju. Takið eftir að hér þarf ekki að nota hornklofa eins og í `while`-lykkjunni og kóðinn er snyrtilegri fyrir vikið. 
 
 ```python
 >>>for (car in cars):
 >>>    print (car)
-"Ford"
-"Volvo"
-"BMW"
+Ford
+Volvo
+BMW
 ```
 
 # Föll
@@ -439,32 +459,39 @@ def fallið_mitt():
 Til þess að kalla á fallið notum við fallnafnið með sviga fyrir aftan 
 
 ```Python
-def hallo():
-  print("Halló heimur")
+>>>def hallo():
+>>>  print("Halló heimur")
 
-hallo()
+>>>hallo()
+Halló heimur
 ```
 
 ### Viðföng
 Við getum látið fallið hafa upplýsingar með því að setja inn sem viðfang. Viðfangið er sett inn í svigana.
 
 ```Python
-def heilsaðu(fnafn):
-  print("Hæ {}".format(fnafn))
+>>>def heilsaðu(fnafn):
+>>>  print("Hæ {}".format(fnafn))
 
-heilsaðu("R2D2") # Hæ R2D2
-heilsaðu("Yoda") # Hæ Yoda
-heilsaðu("Chewbacca") # Hæ Chewbacca
+>>>heilsaðu("R2D2") 
+Hæ R2D2
+>>>heilsaðu("Yoda") 
+Hæ Yoda
+>>>heilsaðu("Chewbacca") 
+Hæ Chewbacca
 ```
 Það er hægt að setja inn mörg viðföng en maður þarf þá að aðskilja þau með kommu `,`.
 
 ```Python
-def undurVeraldar(bygging, byggt):
-  print("{}, byggingu lokið árið {}".format(bygging, byggt))
+>>>def undurVeraldar(bygging, byggt):
+>>>  print("{}, byggingu lokið árið {}".format(bygging, byggt))
 
-undurVeraldar("Eiffel turninn", "1889") # Eiffel turninn byggingu lokið árið 1889
-undurVeraldar("Pýramídarnir","2610 BC" ) # Pýramídarnir byggingu lokið árið 2610 BC
-undurVeraldar("Kína Múrinn" "206 BC") # Kína Múrinn byggingu lokið árið 206 BC
+>>>undurVeraldar("Eiffel turninn", "1889") 
+Eiffel turninn, byggingu lokið árið 1889
+>>>undurVeraldar("Pýramídarnir","2610 BC" ) 
+Pýramídarnir, byggingu lokið árið 2610 BC
+>>>undurVeraldar("Kína Múrinn" "206 BC") 
+Kína Múrinn, byggingu lokið árið 206 BC
 ```
 Fall verður að vera kallað með réttan fjölda af viðföngum. Ef fallið tekur inn tvö viðföng, þá þurfum við að setja inn tvö viðföng. Ein undantekning eru sjálfgefin viðföng. 
 
@@ -472,22 +499,29 @@ Fall verður að vera kallað með réttan fjölda af viðföngum. Ef fallið te
 Stundum viljum við hafa sjálfgefið viðfang ef ekkert viðfang er sett inn í fallið.
 
 ```Python
-def heimaland(land = "Ísland"):
-  print("Ég er frá " + country)
+>>>def heimaland(land = "Íslandi"):
+>>>  print("Ég er frá " + land)
 
-heimaland("Svíþjóð") # Ég er frá Svíþjóð
-heimaland("Frakklandi") # Ég er frá Frakklandi
-heimaland() # Ég er frá Íslandi
-heimaland("Bandaríkjunum") # Ég er frá Bandaríkjunum
+>>>heimaland("Svíþjóð") 
+Ég er frá Svíþjóð
+>>>heimaland("Frakklandi")
+Ég er frá Frakklandi
+>>>heimaland()
+Ég er frá Íslandi
+>>>heimaland("Bandaríkjunum") 
+Ég er frá Bandaríkjunum
 ```
 
 ### Að skila gildum, return
 Við getum notað `return` til að láta fallið skila gildi.
 
 ```Python
-def margfaldaðMeðTveimur(x):
-  return 2 * x
+>>>def margfaldaðMeðTveimur(x):
+>>>  return 2 * x
 
-print(margfaldaðMeðFimm(3)) # 2 * 3 verður 6
-print(margfaldaðMeðFimm(5)) # 2 * 5 verður 10
-print(margfaldaðMeðFimm(9)) # 2 * 9 verður 18
+>>>print(margfaldaðMeðTveimur(3)) 
+6
+>>>print(margfaldaðMeðTveimur(5)) 
+10
+>>>print(margfaldaðMeðTveimur(9))
+18
