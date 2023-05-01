@@ -100,7 +100,32 @@ Meðaltal = (6 + 2 + -1 + 9 + 4) / 5
 ### Verkefni 7 - Gagnavinnsla
 Þið fáið skrá sem inniheldur alvöru gögn frá Veðurstofunni. Í þessari skrá er að finna meðalhitastig hvers mánaðar í Reykjavík frá árinu 1949 og til dagsins í dag. 
 
-Verkefnið er að lesa inn þessa skrá og reikna út meðalhitastig fyrir hvert ár. Auk þess skal reikna hæsta og lægsta hitastig hvers árs
+Verkefnið er að lesa inn þessa skrá og reikna út meðalhitastig fyrir hvert ár. Auk þess skal reikna hæsta og lægsta hitastig hvers árs.
+
+Þar sem um óþekkt gögn sem fara mjög langt aftur í tímann er að ræða, teljið einnig fjölda mánaða í hverju ári og prentið út. Notið síðan þann fjölda mánaða sem þið tölduð til að reikna út meðaltalið.
+
+```python
+>>>python verkefni7.py
+mánuðir árið 1949 eru 12
+meðalhiti er 3.841666666666667
+hámarkshitastig er 10.5
+lágmarkshitastig er -2.7
+
+
+mánuðir árið 1950 eru 12
+meðalhiti er 4.791666666666667
+hámarkshitastig er 12.4
+lágmarkshitastig er -1.4
+
+
+mánuðir árið 1951 eru 12
+meðalhiti er 4.058333333333334
+hámarkshitastig er 11.4
+lágmarkshitastig er -3.0
+
+...
+```
+
 
 ### Verkefni 8 - Gagnavinnsla áframhald
 Bætið við `Verkefni 7` þannig að fundið er hæsta og lægsta meðalhitastig hvers mánaðar.
