@@ -247,3 +247,11 @@ Gildingaraðgerðir eru notaðar til að bera saman tvö gildi.
 | >=			  | Stæra en eða jafnt og	  | x >= y		|
 | <=				| Minna en eða jafnt og		| x <= y		|
 
+### Hallaðgerðir
+Hallalausir aðgerðir eru notuð til að sameina skilyrðisbundna  
+
+| Aðgerð    | Heiti			                                      | Dæmi			        |
+| --------- | ----------------------------------------------- | ----------------- |
+| and			  | Skilar True	ef báðar fullyrðingarnar eru sannar | x < 5 and  x < 10 |
+| or			  | Skilar True	ef önnur fullyrðingin eru sönn      | x < 5 or x < 4		|
+|not			  | Skilar ósatt ef útkoman er sönn, snýr niðurstöðuni við | not(x < 5 and x < 10) |
