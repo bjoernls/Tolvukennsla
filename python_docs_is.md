@@ -33,7 +33,7 @@ Við getum notað eitthvað sem heitir Camel Case 🐫 þar sem að hvert orð e
 Við getur líka notað eittvað sem heitir snake case 🐍 en þá notum við undirstriki  `fjöldi_sæta_í_sal.` 
 
 ### Inntak frá notanda
-Til að biðja notanda um inntak, er hægt að nota ´input()´ og vista það í breytu.
+Til að biðja notanda um inntak, er hægt að nota `input()` og vista það í breytu.
 ```python
 print("Hvað heitir þú?")
 nafn = input()
@@ -57,7 +57,7 @@ else:
 Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur : 
 Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
 
-Ýmsir möguleikar til að bera saman tvö gildi eru í boði, í forritinu fyrir ofan er athugað hvort að breyta sem jöfn "c" eða "f". Fleiri samanburðaraðgerðir eru að finna í kaflanum **Aðgerðir** hér fyrir neðan.
+Ýmsir möguleikar til að bera saman tvö gildi eru í boði, í forritinu fyrir ofan er athugað hvort að breyta sé jöfn "c" eða "f". Fleiri samanburðaraðgerðir eru að finna í kaflanum **Aðgerðir** hér fyrir neðan.
 
 ## Lykkjur
 Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær helstu gerðir af lykkjum, `while` og `for`.
@@ -96,11 +96,12 @@ print(x, y, z)
 ```
 
 # Gerðir gagna
-Hægt er að sjá af hvaða gerð gögnin erum sem við erum að vinna með með því að nota `type()` fallið.
+Hægt er að sjá af hvaða gerð gögnin eru sem við erum að vinna með með því að nota `type()` fallið.
 
 ```python
-x = 5
-print(type(x))
+>>>x = 5
+>>>print(type(x))
+<class 'int'>
 ```
 
 Hérna eru nokkrar algengar gerðir gagna:
