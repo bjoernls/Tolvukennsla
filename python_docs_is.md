@@ -1,6 +1,3 @@
-# Print
-Til að prenta texta í skipunargluggann notum við   `print()`.
-
 # Athugasemdir
 Athugasemdir eru notaðar til þess að útskýra kóðann eða sem minnispunkta fyrir forritarann. Athugasemdir byrja á `#` og svo kemur athugasemdin t.d.
 
@@ -40,7 +37,7 @@ nafn = input()
 print("Góðan daginn " + nafn  + "!")
 ```
 
-# Frálag
+# Print
 Í Python notum við `print()` fallið til að skila því sem við erum að gera.
 
 ```python
