@@ -32,14 +32,58 @@ Við getur notað undirstrik _ `fjöldi_sæta`.
 Við getum notað eitthvað sem heitir Camel Case 🐫 þar sem að hvert orð eftir fyrsta orðið byrjar á stórum staf f`jöldiSæta.` 
 Við getur líka notað eittvað sem heitir snake case 🐍 en þá notum við undirstriki  `fjöldi_sæta_í_sal.` 
 
+### Inntak frá notanda
+Til að biðja notanda um inntak, er hægt að nota ´input()´ og vista það í breytu.
+```python
+print("Hvað heitir þú?")
+nafn = input()
+print("Góðan daginn " + nafn  + "!")
+```
+
+# Segðir í Python
+
+### If-segðin
+Hægt er að keyra kóða undir ákveðnum skilyrðum. 
+
+```python
+if (unit == "c"):
+    print("Talan er í celsíus")
+elif (unit == "f"):
+    print("Talan er í Fahrenheit")
+else:
+    print("Villa")
+```
+
+Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur : 
+Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
+
+Ýmsir möguleikar til að bera saman tvö gildi eru í boði, í forritinu fyrir ofan er athugað hvort að breyta sem jöfn "c" eða "f". Fleiri samanburðaraðgerðir eru að finna í kaflanum **Aðgerðir** hér fyrir neðan.
+
+## Lykkjur
+Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær helstu gerðir af lykkjum, `while` og `for`.
+```python
+i = 0
+while (i < 10):
+   print("Þessi lína verður prentuð 10 sinnum")
+   i = i + 1 #hér má líka skrifa i += 1 sem gerir nákvæmlega það sama.
+```
+
+**for** lykkjur eru gjarnan notaðar til að ítra yfir gagnasöfn, t.d. fylki eða skrá.
+```python
+file = open("vedurgogn.txt", "r") #hér stendur r fyrir read og gefur tölvunni til kynna að skráin verður lesin.
+for (line in file):
+    print (line) 
+```
+Í dæminu fyrir ofan er skrá opnuð með lesaðgang og prentuð út á skipanagluggann.
+
 # Frálag
 Í Python notum við `print()` fallið til að skila því sem við erum að gera.
 
 ```python
-x = 5
-print(x)
+>>> x = 5
+>>> print(x)
 
->>> 5
+5
 ```
 Við getum skilað mörgum breytum í  `print()` fallið með því að aðskilja þær með kommu `,`.
 
@@ -111,6 +155,35 @@ print(len(a))
 
 11
 ```
+
+# Fylki
+Fylki (e. array) virka eins og listar, þar sem mörg gildi eru vistuð undir sömu breytunni. Fylki eru táknaðar með hornklofum `[]`
+
+```python
+cars = ["Ford", "Volvo", "BMW"]
+```
+
+Til að sækja gildi úr fylki, er aftur notaðir hornklofar með tölustaf sem vísar í hvaða sæti gildið er. 
+**ATH** í Python og flestum forritunarmálum er fyrsta gildið alltaf 0.
+```python
+>>> print(cars[0])
+"Ford"
+>>> print(cars[1])
+"Volvo"
+>>> print(cars[2])
+"BMW"
+```
+
+
+Til að spara okkur sporin er hægt að nota áðurnefnda `for`-lykkju
+```python
+>>>for (car in cars):
+>>>    print (car)
+"Ford"
+"Volvo"
+"BMW"
+```
+
 ### Samskeyting
 Í forritun virkar plúsin eins og í stærðfræði hann leggur saman tvær tölur. En eð við notum + með strengjum þá skeytir hann strengina saman. 
 
@@ -203,9 +276,9 @@ Booleans getur annað hvort verið **True** eða **False.**
 Python skyptir aðgerðir í eftirfarandi flokka:
 
 - Reikniaðgerðir
-- Gildisveitingaraðgerðir
-- Samanburðaraðgerðir
-- Hallaðgerðir
+- Gildingaraðgerðir
+- Röksamanburðaraðgerðir
+- Röklegar aðgerðir
 
 ### Reyknisaðgerðir
 Reikniaðgerðir kannast flestir við en það eru:
@@ -234,20 +307,28 @@ Gildisaðgerðir eru aðgerðir sem setja eitthvað gildi jafnt og eitthvað. I 
 | &=			| x &= 3		    | x = x & 3	 |
 | |=			| x |= 3	      | x = x | 3	 |
 
+Eftirfarandi rökaðgerðir bera saman tvö gildi.
 
-### Samanburðaraðgerðir
-Gildingaraðgerðir eru notaðar til að bera saman tvö gildi.
+| Tákn			    | Heiti			    | Dæmi			    | Þýðing
+| ------------- | ------------- | ------------- | ----------------------- |
+| <				      | Minna en  	  | x < y			    | x er minna en y         |
+| >				      | Stærra en 	  | x > y			    | x er stærra en y        |
+| ==			      | Samasem   	  | x == y		    | x er jafnt og y         |
+| !				      | Neitun   		  | !x			      | x er ekki satt          |
+| !==			      | Neitun		    | x !==	y	      | x er ekki jafnt og y    |
 
-| Aðgerð    | Heiti			              | Dæmi			|
-| --------- | -------------           | --------- |
-| ==			  | Samasem	                | x == y	  |
-| !=			  | Ekki samasem            | x != y		|
-| >				  | Stæra en	              | x > y			|
-| <				  | Minna en		            | x < y			|
-| >=			  | Stæra en eða jafnt og	  | x >= y		|
-| <=				| Minna en eða jafnt og		| x <= y		|
+Þessar aðgerðir eru mikið notaðar í `if` og `while`
 
-### Hallaðgerðir
+
+```python
+if (x !== y):
+    #kóði hér
+...
+while (x > y):
+    #kóði hér
+```
+
+## Röklegar aðgerðir
 Hallalausir aðgerðir eru notuð til að sameina skilyrðisbundna  
 
 | Aðgerð    | Heiti			                                      | Dæmi			        |
