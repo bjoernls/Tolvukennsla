@@ -245,7 +245,6 @@ Hinsvegar er hægt að nota neitunarvirkja, `not` eða `!` til að "flippa" Bool
 
 
 ```python
->>>booleanDaemi2 = x < 0
 >>>print(booleanDaemi and not booleanDaemi2)
 True
 ```
