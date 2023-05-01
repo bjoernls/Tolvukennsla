@@ -57,6 +57,8 @@ else:
 Takið eftir að eftir skilyrðinu í fyrstu línunni kemur tvípunktur : 
 Þær línur sem koma á eftir tvípunktinum verða að byrja með **tab**-bili, annars tekur tölvan ekki mark á skilyrðinu.
 
+Ýmsir möguleikar til að bera saman tvö gildi eru í boði, í forritinu fyrir ofan er athugað hvort að breyta sem jöfn "c" eða "f". Fleiri samanburðaraðgerðir eru að finna í kaflanum **Aðgerðir** hér fyrir neðan.
+
 ## Lykkjur
 Lykkjur keyra sama kóða aftur og aftur þar til skilyrði er mætt. Til eru tvær helstu gerðir af lykkjum, `while` og `for`.
 ```python
@@ -153,6 +155,35 @@ print(len(a))
 
 11
 ```
+
+# Fylki
+Fylki (e. array) virka eins og listar, þar sem mörg gildi eru vistuð undir sömu breytunni. Fylki eru táknaðar með hornklofum `[]`
+
+```python
+cars = ["Ford", "Volvo", "BMW"]
+```
+
+Til að sækja gildi úr fylki, er aftur notaðir hornklofar með tölustaf sem vísar í hvaða sæti gildið er. 
+**ATH** í Python og flestum forritunarmálum er fyrsta gildið alltaf 0.
+```python
+>>> print(cars[0])
+"Ford"
+>>> print(cars[1])
+"Volvo"
+>>> print(cars[2])
+"BMW"
+```
+
+
+Til að spara okkur sporin er hægt að nota áðurnefnda `for`-lykkju
+```python
+>>>for (car in cars):
+>>>    print (car)
+"Ford"
+"Volvo"
+"BMW"
+```
+
 ### Samskeyting
 Í forritun virkar plúsin eins og í stærðfræði hann leggur saman tvær tölur. En eð við notum + með strengjum þá skeytir hann strengina saman. 
 
