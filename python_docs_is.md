@@ -527,3 +527,4 @@ Við getum notað `return` til að láta fallið skila gildi.
 10
 >>>print(margfaldaðMeðTveimur(9))
 18
+```
